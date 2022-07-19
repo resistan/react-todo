@@ -2,8 +2,8 @@ import React from "react";
 import styled from "styled-components";
 import { Helmet } from "react-helmet";
 import { useRecoilState } from "recoil";
-import { IToDoState, newToDoState } from "../atoms";
-import { DragDropContext, Droppable, DropResult } from "react-beautiful-dnd";
+import { newToDoState } from "../atoms";
+import { DragDropContext, DropResult } from "react-beautiful-dnd";
 import Board from "./Board";
 import Button from "./Button";
 
@@ -49,7 +49,7 @@ const ToDoList = () => {
     });
   };
   const onDragEnd = (info: DropResult) => {
-    const { destination, draggableId, source } = info;
+    const { destination, source } = info;
     if (!destination) return;
     if (destination?.droppableId === source.droppableId) {
       // same board

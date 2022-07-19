@@ -61,6 +61,7 @@ const Board = ({ toDos, boardId }: IBoardProps) => {
       const boardTitles = Object.keys(oldBoards);
       let boardCopy: IToDoState = {};
       const currentOrder = boardTitles.findIndex((el) => el === boardId);
+      // eslint-disable-next-line
       boardTitles.map((item, index) => {
         if (index === currentOrder) {
           boardCopy[newBoardTitle] = oldBoards[item];
@@ -76,7 +77,8 @@ const Board = ({ toDos, boardId }: IBoardProps) => {
     setToDos((oldBoards) => {
       const boardTitles = Object.keys(oldBoards);
       let boardCopy: IToDoState = {};
-      boardTitles.map((item, index) => {
+      // eslint-disable-next-line
+      boardTitles.map((item) => {
         if (item !== boardId) boardCopy[item] = oldBoards[item];
       });
       return { ...boardCopy };
