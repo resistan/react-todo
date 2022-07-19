@@ -2,12 +2,13 @@
   "name": "rmc2todo",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://resistan.github.io/reactodo",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.3.0",
     "@testing-library/user-event": "^13.5.0",
+    "@types/react": "^18.0.12",
     "@types/react-beautiful-dnd": "^13.1.2",
+    "@types/react-dom": "^18.0.5",
     "@types/react-helmet": "^6.1.5",
     "@types/recoil": "^0.0.9",
     "@types/styled-components": "^5.1.25",
@@ -28,9 +29,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": [
@@ -53,8 +52,6 @@
   "devDependencies": {
     "@types/jest": "^27.5.2",
     "@types/node": "^16.11.39",
-    "@types/react": "^18.0.12",
-    "@types/react-dom": "^18.0.5",
     "gh-pages": "^4.0.0"
   }
 }
