@@ -54,7 +54,7 @@ const BoardList = styled.div<IBoardListProps>`
 const Board = ({ toDos, boardId }: IBoardProps) => {
   const setToDos = useSetRecoilState(newToDoState);
   // console.log(toDos);
-  const { register, handleSubmit, setValue } = useForm<IForm>();
+  const { register, handleSubmit } = useForm<IForm>();
   const [titleEdit, setTitleEdit] = useState(false);
   const handleValid = ({ newBoardTitle }: IForm) => {
     setToDos((oldBoards) => {
